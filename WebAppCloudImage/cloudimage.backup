@@ -1,0 +1,73 @@
+PGDMP         $            	    x         
+   d32kjv8v4jgech    9.3.11    9.3.11     ù           0    0    ENCODING    ENCODING        SET client_encoding = 'UTF8';
+                       false            û           0    0 
+   STDSTRINGS 
+   STDSTRINGS     (   SET standard_conforming_strings = 'on';
+                       false            ü           1262    65546 
+   d32kjv8v4jgech    DATABASE     ú   CREATE DATABASE "d32kjv8v4jgech" WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'English_United States.1252' LC_CTYPE = 'English_United States.1252';
+    DROP DATABASE "d32kjv8v4jgech";
+             postgres    false                        2615    2200    public    SCHEMA        CREATE SCHEMA public;
+    DROP SCHEMA public;
+             postgres    false            †           0    0    SCHEMA public    COMMENT     6   COMMENT ON SCHEMA public IS 'standard public schema';
+                  postgres    false    6            °           0    0    public    ACL     ¢   REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+                  postgres    false    6                        3079    11750    plpgsql 	   EXTENSION     ?   CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+    DROP EXTENSION plpgsql;
+                  false            ¢           0    0    EXTENSION plpgsql    COMMENT     @   COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+                       false    1            ≠            1259    73737    LandingPage    TABLE       CREATE TABLE "LandingPage" (
+    "ID" character varying NOT NULL,
+    "NoiDungBenDuoi_ThanhVienPhatTrien" character varying(1000),
+    "NoiDungBenDuoi_ThongTinVeBaiTapLon" character varying(1000),
+    "NoiDungBenDuoi_DangKyNhanTuVan" character varying(1000)
+);
+ !   DROP TABLE public."LandingPage";
+       public         postgres    false    6            ´            1259    65547 	   NguoiDung    TABLE     3  CREATE TABLE "NguoiDung" (
+    "MaND" character varying(10) NOT NULL,
+    "TenND" character varying(100),
+    "NgaySinh" timestamp without time zone,
+    "Gmail" character varying(100),
+    "SoDT" character varying(11),
+    "GoiDichVu" character varying(50),
+    "NgayDangKy" timestamp without time zone
+);
+    DROP TABLE public."NguoiDung";
+       public         postgres    false    6            ¨            1259    65552    TaiKhoan    TABLE     d  CREATE TABLE "TaiKhoan" (
+    "MaTK" character varying(10) NOT NULL,
+    "TaiKhoan" character varying(100),
+    "MatKhau" character varying(100),
+    "MaND" character varying(10),
+    "KichHoat" character varying(50),
+    "MaKichHoat" character varying(100),
+    "NgayKichHoat" timestamp without time zone,
+    "NgayKetThuc" timestamp without time zone
+);
+    DROP TABLE public."TaiKhoan";
+       public         postgres    false    6            ö          0    73737    LandingPage 
+   TABLE DATA               ì   COPY "LandingPage" ("ID", "NoiDungBenDuoi_ThanhVienPhatTrien", "NoiDungBenDuoi_ThongTinVeBaiTapLon", "NoiDungBenDuoi_DangKyNhanTuVan") FROM stdin;
+    public       postgres    false    173   <       ò          0    65547 	   NguoiDung 
+   TABLE DATA               g   COPY "NguoiDung" ("MaND", "TenND", "NgaySinh", "Gmail", "SoDT", "GoiDichVu", "NgayDangKy") FROM stdin;
+    public       postgres    false    171   b       ô          0    65552    TaiKhoan 
+   TABLE DATA               }   COPY "TaiKhoan" ("MaTK", "TaiKhoan", "MatKhau", "MaND", "KichHoat", "MaKichHoat", "NgayKichHoat", "NgayKetThuc") FROM stdin;
+    public       postgres    false    172   e       +           2606    73744    LandingPage_pkey 
+   CONSTRAINT     Y   ALTER TABLE ONLY "LandingPage"
+    ADD CONSTRAINT "LandingPage_pkey" PRIMARY KEY ("ID");
+ J   ALTER TABLE ONLY public."LandingPage" DROP CONSTRAINT "LandingPage_pkey";
+       public         postgres    false    173    173            '           2606    65551    NguoiDung_pkey 
+   CONSTRAINT     W   ALTER TABLE ONLY "NguoiDung"
+    ADD CONSTRAINT "NguoiDung_pkey" PRIMARY KEY ("MaND");
+ F   ALTER TABLE ONLY public."NguoiDung" DROP CONSTRAINT "NguoiDung_pkey";
+       public         postgres    false    171    171            )           2606    65556    TaiKhoan_pkey 
+   CONSTRAINT     U   ALTER TABLE ONLY "TaiKhoan"
+    ADD CONSTRAINT "TaiKhoan_pkey" PRIMARY KEY ("MaTK");
+ D   ALTER TABLE ONLY public."TaiKhoan" DROP CONSTRAINT "TaiKhoan_pkey";
+       public         postgres    false    172    172            ,           2606    65557    TaiKhoan_MaND_fkey    FK CONSTRAINT     y   ALTER TABLE ONLY "TaiKhoan"
+    ADD CONSTRAINT "TaiKhoan_MaND_fkey" FOREIGN KEY ("MaND") REFERENCES "NguoiDung"("MaND");
+ I   ALTER TABLE ONLY public."TaiKhoan" DROP CONSTRAINT "TaiKhoan_MaND_fkey";
+       public       postgres    false    1831    172    171            ö     xúmê±N√0EÁ‰+ÓT·`aÄâë%I#€Rm¢‚÷™K3V©ÅQ©àâXÉCˇ„˝	œÈõı|ﬂΩÁæ”ì$Ié¢cﬂÊ∞“ØåD≠¸´Åæ2∫"◊ÿ)uœ
+FHEÓN√˙ÎX˛ƒ√Ã '˜í≤dø%˜®0ˆüº?Bø ∑‰◊Ñ‹{é⁄Ø ¸G	ø˚·ö∫JÈ[À°l<Á F∞ê˚÷†&˜†–7lhæ◊∏(Rç≥Bg≈4:gº@Œ∆Îjà
+hÛ
+ô¢ÓÀÜÌnäiY"Ösπﬂ≤Ø‡,ˇ∆ç¬gﬂ§a …›Ûd∏H‘/ÿhf t™&∏é"êÖ∞q¿g(÷/ÀC?ru˚M˙ßT|9ä„¯å9∂Å      ò   Û   xúùíÕn¬0Ñœõß»ÌÆÉ9q@ÙÜäƒëã!i)v8Ô_áó °®^ü<öo<ñ◊KÏ¡2702&®1‚¸≤·ÿÍCÈJmK◊⁄ÇîRã¬Ë™û(§d…8e¯™µ´lkÓû›!—˙ƒê˘ 
+'›<”ïê©HVß<ôdq!≥7)Jà‰õ¿ë'¶‹l∫‚Ò∂ko}uË∫'Hˇzùa†¶†Ø	√W!?ªÂà€ü¬gSgØ›Sÿ›˚∑‹3p˘ŸΩCÅŒLe√zÂ◊!Q˙]Y]è^È™æ&Ó&Q˝ ‰‡∑…      ô   £  xúçîÕéöPÜ◊«{h2{2Â+4q!
+(Œ *(7 ?√?Ç∫ÓÙöÆõt›§iRõﬁGÔ§SõV;%Õú|´ÔúÛæœyÛÂ®¯ka¿q„d2-2ñ)£‰·üÕØoNÔn¢”˚Õˆfõ~ˇ¯∂Á6qxŸ[úπÅ’π~ˆ∞'Ωé˙€?€`‡¢çÉ¡ˆ€ÎoÒ>7 k˘±.7âÛMú^”⁄óœ/Nü‹ı˙¢B¥©@ﬂ®ÓƒÒ„Õb∫	]-”WË¿–Â!è:eÍ&åÁYEÌOõÂnëÓR_Ú‰ªj‚"‡√¯)	‚¢⁄%>∆≤lù B£î∫bmE"Ø≤"€HÓÜá]E“cCsh∏ú@¥@áï)¢ah÷Œƒ·%„∞5ç±*√í∞‹£∂vÑP≤$äë∫{’¥Ñ£ç”ÆË˜zO	)PYA¥M≠)Kôz¿∏˘5’Ü´∆QÕô,A˚"÷ê]e4“èbI{e!¢B>uêdÖü⁄≥Ç¢ÅÚ•G9](RyeO∑¶c(,©€-öH≠ıE¬‘vp4õ£aK•ˆ›ZËœÛÈ>˝Á≈]`Éê•˝lÈnú^Yu€¨2üñz©gƒXb2r?&ˆàŒeu>ˇü*∑¨@√‰°oœ≠±Î_π1mnO'ºŒrMôÔË⁄S≠ËË∫ÍJ6êúy¡QÖıçÇèû5Ä<xAb= ŸÏúó˙#À*M%Ÿ3Qùı.Hèß[êÇ*.(∑2Kkﬂßìë5≤ÂÕjÈa£9ç5!£å∏;áÉj"ﬁ[yŸÑ¯ÃØ˚v≤fœùDXN$`¿‰AZq}[ºNãm˘P.dGV°Sx¡ÕÖà‡'%ØèÑq∂?z9˘ø∞÷/;ùŒ ã≈     
